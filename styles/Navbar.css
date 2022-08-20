@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+.navcontainer {
+  @apply shadow-sm fixed w-full z-10  bg-black;
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background: hsla(30, 100%, 55%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(30, 100%, 55%, 1) 0%,
+    hsla(0, 0%, 100%, 1) 50%,
+    hsla(102, 54%, 40%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(30, 100%, 55%, 1) 0%,
+    hsla(0, 0%, 100%, 1) 50%,
+    hsla(102, 54%, 40%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(30, 100%, 55%, 1) 0%,
+    hsla(0, 0%, 100%, 1) 50%,
+    hsla(102, 54%, 40%, 1) 100%
+  );
+  background-size: 0 3px;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#ffedb7, #ffedb7);
+}
+
+.link-underline-black-green {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#ffffff, #ffffff);
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
+
+.link {
+  color: #fff;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.switchmob {
+  transition: all 1s ease-in-out;
+}
+
+.active {
+  border-bottom: #f5e6cc 3px solid;
+  padding-bottom: 3px;
+  border-radius: 0.5px;
+}
+
+.logo {
+  margin: auto;
+}
+
+.readmore {
+  color: red;
+}
+
+.lol {
+  background-attachment: fixed;
+}
+
+.fontat {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.Font-dotSlash {
+  font-size: 1.14rem;
+}
