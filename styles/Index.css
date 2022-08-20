@@ -1,0 +1,47 @@
+/* .link-underline 
+{
+		border-bottom-width: 0;
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+		background-size: 0 3px;
+		background-position: 100% 100%;
+		background-repeat: no-repeat;
+		transition: background-size 0.8s ease-in-out;
+}
+
+.link-underline-black {
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#ffedb7, #ffedb7)
+}
+
+.link-underline:hover {
+		background-size: 100% 3px;
+		background-position: 0 100%
+} */
+
+.insta:hover {
+  color: #bc2a8d;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in;
+}
+.insta {
+  transform: scale(1);
+  transition: all 0.3s ease-out;
+}
+.twitter {
+  transform: scale(1);
+  transition: all 0.3s ease-out;
+}
+.twitter:hover {
+  color: #1da1f2;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in;
+}
+
+.gmail {
+  transform: scale(1);
+  transition: all 0.3s ease-out;
+}
+.gmail:hover {
+  color: #ea4335;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in;
+}

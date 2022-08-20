@@ -1,0 +1,19 @@
+{
+  "extends": "next/core-web-vitals",
+  "overrides": [
+    {
+      "files": ["**/*.js", "**/*.jsx"],
+      "excludedFiles": ["./.next"],
+      "extends": ["plugin:prettier/recommended"],
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "auto"
+          },
+          { "usePrettierrc": true }
+        ]
+      }
+    }
+  ]
+}

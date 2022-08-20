@@ -1,0 +1,7 @@
+.section {
+  @apply bg-white;
+}
+
+.section__heading {
+  @apply text-step-3 font-bold uppercase;
+}

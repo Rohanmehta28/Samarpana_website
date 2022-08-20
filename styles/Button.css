@@ -1,0 +1,26 @@
+.btn {
+  @apply px-6 py-2 rounded-lg hover:rounded-md transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1 border-2 border-[rgb(245,230,204)];
+}
+
+.btn-green {
+  @apply px-6 py-2 rounded-lg hover:rounded-md transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1 border-2 border-[#1cca00];
+}
+
+.btn-svg {
+  @apply flex flex-row gap-2 items-center justify-center;
+}
+
+.btn-black {
+  @apply bg-black text-white;
+}
+
+.btn-white {
+  @apply bg-white text-black;
+}
+
+.btn:hover {
+  box-shadow: 4px 4px 0px 0px #f5e6cc;
+}
+.btn-green:hover {
+  box-shadow: 4px 4px 0px 0px #1cca00;
+}
