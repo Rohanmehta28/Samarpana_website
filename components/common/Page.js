@@ -24,7 +24,6 @@ function Page({ children, nopadding, background = 'white' }) {
       }}
     >
       {children}
-      <AboutUs/>
       <Footer />
     </motion.div>
   )
