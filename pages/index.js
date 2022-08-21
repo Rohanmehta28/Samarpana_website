@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Page from '../components/common/Page'
+import AboutUs from '../components/index/AboutUs'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
       <Page nopadding>
         <h1>Samarpana</h1>
+        <AboutUs/>
       </Page>
     </div>
   )

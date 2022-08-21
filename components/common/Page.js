@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import AboutUs from '../index/AboutUs'
 import Footer from './Footer'
 
 function Page({ children, nopadding, background = 'white' }) {
