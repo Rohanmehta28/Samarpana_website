@@ -21,7 +21,7 @@ module.exports = {
         'step-7': 'clamp(1.77rem, 0.6rem + 5.85vw, 4.77rem)',
         'step-8': 'clamp(1.89rem, 0.3rem + 7.94vw, 5.96rem)',
         'step-9': 'clamp(2.02rem, -0.1rem + 10.6vw, 7.45rem)',
-        'step-10': 'clamp(3.2rem, -0.44rem + 12.25vw, 13rem)',
+        'step-10': 'clamp(2.6rem, -0.44rem + 12.4vw, 14rem)',
       },
       fontFamily: {
         'red-hat': ['REDHAT', 'sans-serif'],

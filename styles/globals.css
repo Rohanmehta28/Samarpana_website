@@ -2,6 +2,7 @@
 @import './Navbar.css';
 @import './Index.css';
 @import './Section.css';
+@import './Hero.css';
 
 @tailwind base;
 @tailwind components;

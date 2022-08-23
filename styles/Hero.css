@@ -1,0 +1,9 @@
+.heroLetter {
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 4px;
+}
