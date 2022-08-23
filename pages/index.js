@@ -8,10 +8,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Samarpana 2022</title>
-        <meta
-          name="description"
-          content="Aatmatrisha 2022 PES University | The annual techno-cultural fest of PES University."
-        />
+        <meta name="description" content="" />
         <link rel="icon" href="/at22_icon.ico" />
       </Head>
       <Page nopadding>
