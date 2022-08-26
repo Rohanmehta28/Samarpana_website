@@ -10,9 +10,9 @@ function Announcement(props) {
             exercitationem praesentium nihil.
           </p>
         </div>
-        <div className="block sm:flex justify-center">
+        <div className="block pb-4 sm:flex justify-center">
           <div className=" sm:flex justify-start w-1/2 px-6">
-            <div className="sm:mt-2 mb-4 bg-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700">
+            <div className="text-center object-cover sm:mt-2 mb-4 bg-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700">
               26/8/2022
             </div>
           </div>
