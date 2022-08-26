@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Page from '../../components/common/Page'
+import Announcement from '../../components/common/Announcement_card'
 
 export default function Announcements() {
   return (
@@ -10,7 +11,11 @@ export default function Announcements() {
         <link rel="icon" href="/at22_icon.ico" />
       </Head>
       <Page nopadding>
-        <h1>Announcements</h1>
+        <h1 className="text-grey text-center text-5xl py-11 font-medium">
+          Announcements
+        </h1>
+        <Announcement />
+        <Announcement />
       </Page>
     </div>
   )
