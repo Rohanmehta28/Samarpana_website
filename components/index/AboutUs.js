@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import running from './running.png'
+import running from './running.svg'
 import soldier from './soldier.png'
 function AboutUs() {
   return (
@@ -15,9 +15,9 @@ function AboutUs() {
           empowerment talks and felicitation events from past 11 years. Till
           date Samarpana has reached 120+ martyrs' families.
           <br />
-          In order to raise funds team Samarpana conducts following events :
+          In order to raise funds team Samarpana conducts following events:
         </div>
-        <div className="w-2/5 z-50 relative left-0 bottom-[400px]">
+        <div className="w-2/5 z-50 relative left-0 bottom-[500px]">
           <div className="flex justify-end">
             <Image src={soldier} className="z-50" alt="soldiers in position" />
           </div>
