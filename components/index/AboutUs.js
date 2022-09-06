@@ -4,9 +4,9 @@ import soldier from './soldier.png'
 function AboutUs() {
   return (
     <div className="my-20">
-      <div className="text-step-7 px-24">About Us</div>
+      <div className="text-step-7 md:px-24 text-center">About Us</div>
       <div className="flex lg:h-96">
-        <div className="w-4/5 lg:w-3/5 pt-6 text-step-2 px-24">
+        <div className="md:w-4/5 lg:w-3/5 pt-6 text-step-2 md:px-24 px-8 text-justify">
           Samarpana is student initiative which seeks to make our community
           aware of the price that we pay for our freedom and express our
           gratitude to those who toil and put their lives on the line so that we
@@ -17,8 +17,8 @@ function AboutUs() {
           <br />
           In order to raise funds team Samarpana conducts following events:
         </div>
-        <div className="w-2/5 z-50 relative left-0 bottom-[500px]">
-          <div className="flex justify-end">
+        <div className="hidden md:block w-2/5 z-50 relative bottom-[550px]">
+          <div className="hidden lg:flex lg:justify-end">
             <Image src={soldier} className="z-50" alt="soldiers in position" />
           </div>
 
@@ -76,8 +76,8 @@ function AboutUs() {
           backgroundColor: '#E0D7C9',
         }}
       >
-        <div className="flex justify-center text-7xl pb-20">Sponsers</div>
-        <div className="flex justify-center items-center ">
+        <div className="flex justify-center text-7xl pb-20">Sponsors</div>
+        <div className="flex justify-center items-center md:flex-row flex-col gap-2">
           <div
             className="w-52 h-52 bg-sky-400 mx-3"
             style={{

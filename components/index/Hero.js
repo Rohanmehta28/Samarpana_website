@@ -48,39 +48,39 @@ function Hero() {
   let letters = [
     {
       letter: 'S',
-      url: 'https://images.unsplash.com/photo-1548013146-72479768bada',
+      url: '/assets/hero_p1.jpeg',
     },
     {
       letter: 'A',
-      url: 'https://images.unsplash.com/photo-1629200711355-e0cab993b5d0',
+      url: '/assets/hero_p2.jpeg',
     },
     {
       letter: 'M',
-      url: 'https://images.unsplash.com/photo-1519802772250-a52a9af0eacb',
+      url: '/assets/hero_p3.jpeg',
     },
     {
       letter: 'A',
-      url: 'https://images.unsplash.com/photo-1588673133509-13d815c64b5c',
+      url: '/assets/hero_p4.jpeg',
     },
     {
       letter: 'R',
-      url: 'https://images.unsplash.com/photo-1489864341077-e204d82219b8',
+      url: '/assets/hero_p5.jpeg',
     },
     {
       letter: 'P',
-      url: 'https://images.unsplash.com/photo-1615482319206-d2545553676e',
+      url: '/assets/hero_p6.jpeg',
     },
     {
       letter: 'A',
-      url: 'https://images.unsplash.com/photo-1566943273145-91f9d555dbdd',
+      url: '/assets/hero_p7.jpeg',
     },
     {
       letter: 'N',
-      url: 'https://images.unsplash.com/photo-1598022727814-6655f880b3ab',
+      url: '/assets/hero_p8.jpeg',
     },
     {
       letter: 'A',
-      url: 'https://images.unsplash.com/photo-1605292356183-a77d0a9c9d1d',
+      url: '/assets/hero_p9.jpeg',
     },
   ]
   return (
