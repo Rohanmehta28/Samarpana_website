@@ -25,6 +25,7 @@ module.exports = {
       },
       fontFamily: {
         'red-hat': ['REDHAT', 'sans-serif'],
+        'manrope':['MANROPE']
       },
     },
   },
