@@ -1,4 +1,21 @@
+import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
+
 function Announcement(props) {
+  const [isOpen, setIsOpen] = useState(false)
+  const [buttonText, setButtonText] = useState('Know More')
+
+  const toggleOpen = () => setIsOpen(!isOpen)
+
+  function handleClick() {
+    if (!isOpen) {
+      setButtonText('Back')
+    } else {
+      setButtonText('Know More')
+    }
+  }
+
   return (
     <div className="flex justify-center">
       <div className="w-4/5 sm:w-1/2 rounded-xl overflow-hidden shadow-lg bg-slate-300 m-8">
@@ -9,6 +26,7 @@ function Announcement(props) {
             Voluptatibus quia, nulla! Maiores et perferendis eaque,
             exercitationem praesentium nihil.
           </p>
+          <AnimatePresence>{isOpen && <Content />}</AnimatePresence>
         </div>
         <div className="block pb-4 sm:flex justify-center">
           <div className=" sm:flex justify-start w-1/2 px-6">
@@ -17,13 +35,41 @@ function Announcement(props) {
             </div>
           </div>
           <div className="sm:flex justify-end w-1/2 mx-0 px-6">
-            <button className="sm:mb-4 mr-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Button
-            </button>
+            <motion.button
+              onClick={() => {
+                toggleOpen()
+                handleClick()
+              }}
+              className="sm:mb-4 mr-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              {buttonText}
+            </motion.button>
           </div>
         </div>
       </div>
     </div>
+  )
+}
+
+function Content() {
+  return (
+    <motion.div
+      layout
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <motion.div>
+        <p className="pt-4 text-gray-700 text-base">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ipsam
+          sed! Harum dicta, ducimus culpa minima voluptas consequuntur
+          praesentium recusandae?
+        </p>
+        <p className="pt-4 text-gray-700 text-base">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, beatae!
+        </p>
+      </motion.div>
+    </motion.div>
   )
 }
 export default Announcement
