@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <Page nopadding>
         <Hero />
-        <AboutUs />
+        {/* <AboutUs /> */}
       </Page>
     </div>
   )
