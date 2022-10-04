@@ -27,6 +27,9 @@ module.exports = {
         'red-hat': ['REDHAT', 'sans-serif'],
         'manrope':['MANROPE']
       },
+      backgroundImage:{
+        'image':'./components/index/running2.png'
+      }
     },
   },
   plugins: [],
