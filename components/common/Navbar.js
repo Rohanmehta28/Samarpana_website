@@ -48,7 +48,7 @@ const Navbar = () => {
     { title: 'Home', path: '/' },
     { title: "Events", path: '/events' },
     { title: 'Announcements', path: '/announcements' },
-    { title: "Samarpana '20", path: '/samarpana-20' },
+    { title: "Samarpana '19", path: '/samarpana-20' },
     { title: 'Registrations', path: '/registrations' },
   ]
 

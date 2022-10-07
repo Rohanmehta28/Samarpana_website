@@ -26,7 +26,7 @@ function Page({ children, nopadding, background = 'white' }) {
       <div className='w-full h-screen'>
         {children}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </motion.div>
   )
 }
