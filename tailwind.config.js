@@ -28,7 +28,8 @@ module.exports = {
       },
       fontFamily: {
         'red-hat': ['REDHAT', 'sans-serif'],
-        'manrope':['MANROPE']
+        'manrope':['MANROPE'],
+        'times': ['TIMES-NEW-ROMAN']
       },
       backgroundImage:{
         'image':'./components/index/running2.png'
