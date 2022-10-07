@@ -7,7 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        'blue':'#072642',
+        'req-green':'#40B78C'
+      },
       fontSize: {
         'step--2': 'clamp(0.99rem, 1.12rem + -0.68vw, 0.64rem)',
         'step--1': 'clamp(1.05rem, 1.15rem + -0.5vw, 0.8rem)',

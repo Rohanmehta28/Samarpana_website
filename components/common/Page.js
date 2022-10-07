@@ -23,7 +23,9 @@ function Page({ children, nopadding, background = 'white' }) {
         ease: 'easeInOut',
       }}
     >
-      {children}
+      <div className='mt-16'>
+        {children}
+      </div>
       <Footer />
     </motion.div>
   )
