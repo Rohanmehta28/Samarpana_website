@@ -29,7 +29,8 @@ module.exports = {
       fontFamily: {
         'red-hat': ['REDHAT', 'sans-serif'],
         'manrope':['MANROPE'],
-        'times': ['TIMES-NEW-ROMAN']
+        'times': ['TIMES-NEW-ROMAN'],
+        'Poppins':['POPPINS']
       },
       backgroundImage:{
         'image':'./components/index/running2.png'

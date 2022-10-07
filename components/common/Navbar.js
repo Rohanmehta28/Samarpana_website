@@ -46,10 +46,10 @@ const Navbar = () => {
 
   const routes = [
     { title: 'Home', path: '/' },
-    { title: 'Registrations', path: '/registrations' },
-    { title: 'Announcements', path: '/announcements' },
     { title: "Events", path: '/events' },
+    { title: 'Announcements', path: '/announcements' },
     { title: "Samarpana '20", path: '/samarpana-20' },
+    { title: 'Registrations', path: '/registrations' },
   ]
 
   return (
@@ -61,7 +61,7 @@ const Navbar = () => {
           transition: 'transform 0.3s ease-in',
           position: 'sticky',
           top: '0',
-          // zIndex: 99,
+          zIndex: 99,
         }}
       >
         <div className="w-full bg-blue">

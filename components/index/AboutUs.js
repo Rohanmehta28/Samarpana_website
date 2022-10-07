@@ -1,42 +1,32 @@
 import Image from 'next/image'
+import Announcement from '../common/Announcement_card'
 import running from './running.svg'
 import soldier from './soldier.png'
+import Cards1 from '../common/Cards1'
+import Cards from '../common/Cards'
+import Event from '../../components/common/Events'
 function AboutUs() {
   return (
-    <div className="my-20">
-      <div className="text-step-7 md:px-24 text-center">About Us</div>
-      <div className="flex lg:h-96">
-        <div className="md:w-4/5 lg:w-3/5 pt-6 text-step-2 md:px-24 px-8 text-justify">
-          Samarpana is student initiative which seeks to make our community
-          aware of the price that we pay for our freedom and express our
-          gratitude to those who toil and put their lives on the line so that we
-          wouldn't have to. This club has been supporting and helping martyrs'
-          families by conducting medical camp, legal camp , cultural events ,
-          empowerment talks and felicitation events from past 11 years. Till
-          date Samarpana has reached 120+ martyrs' families.
-          <br />
-          In order to raise funds team Samarpana conducts following events:
-        </div>
-        <div className="hidden md:block w-2/5 z-50 relative bottom-[550px]">
+    <div className='relative'>
+      <div className="text-step-7 md:px-24  text-center">EVENTS</div>
+      <div >
+      <div class="grid lg:justify-items-center lg:grid-cols-3 pt-9 md:grid-cols-2 ">
+      <Cards route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_164.png" alt="Product"/> 
+      <Cards1 route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_161.png" alt="Product"/>
+      <Cards route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_163.png" alt="Product"/>
+      <Cards route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_164.png" alt="Product"/>
+      <Cards1 route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_161.png" alt="Product"/>
+      <Cards route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_161.png" alt="Product"/>
+      </div>
+       <div className="hidden md:block w-2/5 z-50 relative bottom-[550px]">
           <div className="hidden lg:flex lg:justify-end">
-            <Image src={soldier} className="z-50" alt="soldiers in position" />
           </div>
-
           <div className="flex justify-end px-20 z-20">
-            <div
-              className="bg-yellow-100 relative bottom-24"
-              style={{
-                width: '250px',
-                height: '100px',
-                borderRadius: '100%',
-                backgroundColor: '#e6dfcf',
-              }}
-            ></div>
-          </div>
+            </div>
         </div>
       </div>
 
-      <div className="flex justify-start items-center px-12 py-6">
+      {/* <div className="flex justify-start items-center px-12 py-6">
         <Image src={running} className="w-2/5" alt="human running" />
         <div className="w-3/5 block">
           <div
@@ -69,8 +59,8 @@ function AboutUs() {
             Kabbadi
           </div>
         </div>
-      </div>
-      <div
+      </div> */}
+      {/* <div
         className="py-16"
         style={{
           backgroundColor: '#E0D7C9',
@@ -103,9 +93,10 @@ function AboutUs() {
             }}
           ></div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
 
 export default AboutUs
+
