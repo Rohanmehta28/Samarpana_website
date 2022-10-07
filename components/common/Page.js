@@ -23,7 +23,7 @@ function Page({ children, nopadding, background = 'white' }) {
         ease: 'easeInOut',
       }}
     >
-      <div className='mt-16'>
+      <div className='w-full h-screen'>
         {children}
       </div>
       <Footer />
