@@ -7,7 +7,7 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div>
       <Navbar />
       <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} />
@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
         draggable
         pauseOnHover
       />
-    </>
+    </div>
   )
 }
 

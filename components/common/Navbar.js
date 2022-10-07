@@ -53,7 +53,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div>
+    <div className=''>
       <nav
         className="navcontainer"
         style={{
@@ -61,7 +61,7 @@ const Navbar = () => {
           transition: 'transform 0.3s ease-in',
           position: 'sticky',
           top: '0',
-          zIndex: 99,
+          // zIndex: 99,
         }}
       >
         <div className="w-full bg-blue">

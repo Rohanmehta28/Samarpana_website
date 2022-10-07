@@ -5,7 +5,7 @@ import running from './running2.png'
 import samarpana from './samarpana.png'
 function Hero() {
   return (
-    <div className='my-96'>
+    <div className=''>
       <Image
         src={running}
         layout='fill'
