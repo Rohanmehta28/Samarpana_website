@@ -1,14 +1,24 @@
 import Image from 'next/image'
 import Announcement from '../common/Announcement_card'
 import running from './running.svg'
-import soldier from './soldier.png'
+import manrunning from './manrunning.png'
 import Cards1 from '../common/Cards1'
 import Cards from '../common/Cards'
 import Event from '../../components/common/Events'
 function AboutUs() {
   return (
     <div className='relative'>
-      <div className="text-step-7 md:px-24  text-center">EVENTS</div>
+      {/* <div className="text-step-7 md:px-24  text-center">EVENTS</div> */}
+      <div className='relative'>
+                <div className='flex justify-center content-center'>
+                    <Image src = {manrunning} />
+                </div>
+                <div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'>
+                    <div className="uppercase font-manrope non-italic font-[500] text-[40px] leading-[55px] text-center tracking-[0.14rem] text-[#000]">
+                        Events
+                    </div>
+                </div>
+            </div>
       <div >
       <div class="grid lg:justify-items-center lg:grid-cols-3 pt-9 md:grid-cols-2 ">
       <Cards route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_164.png" alt="Product"/> 

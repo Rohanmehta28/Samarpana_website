@@ -3,6 +3,7 @@ import {useRouter} from 'next/router'
 import Head from 'next/head'
 import Page from '../common/Page'
 import Image from 'next/image'
+import manrunning from './manrunning.png'
 
 function EventSpecificPage(props){
     
@@ -15,8 +16,17 @@ return (
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Poppins:wght@200;300&display=swap" rel="stylesheet"/></head> */}
 
             <Page >
-            <h1 className="text-grey text-center text-5xl py-11 font-'Manrope', sans-serif;">EVENTS</h1>
-            
+            {/* <h1 className="text-grey text-center text-5xl py-11 font-'Manrope', sans-serif;">EVENTS</h1> */}
+            <div className='relative'>
+                <div className='flex justify-center content-center'>
+                    <Image src = {manrunning} />
+                </div>
+                <div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'>
+                    <div className="uppercase font-manrope non-italic font-[500] text-[40px] leading-[55px] text-center tracking-[0.14rem] text-[#000]">
+                        Events
+                    </div>
+                </div>
+            </div>
             <div style={{padding : "20px"}}>
             <Image class="w-full h-1/2 rounded-2xl"
                     src={props.imgUrl}

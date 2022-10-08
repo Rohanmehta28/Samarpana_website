@@ -18,7 +18,7 @@ function Announcement(props) {
 
   return (
     <div className="flex justify-center">
-      <div className="w-4/5 sm:w-1/2 rounded-xl overflow-hidden shadow-lg bg-slate-300 m-8">
+      <div className="w-4/5 sm:w-1/2 rounded-xl overflow-hidden shadow-md hover:shadow-2xl hover:scale-105 bg-white-300 m-8">
         <div className="px-6 sm:px-6 py-4">
           <div className="font-bold text-xl mb-2">Marathon</div>
           <p className="text-gray-700 text-base">
@@ -40,7 +40,7 @@ function Announcement(props) {
                 toggleOpen()
                 handleClick()
               }}
-              className="sm:mb-4 mr-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="sm:mb-4 mr-6 bg-blue-500 hover:bg-blue-700 text-req-green border-req-green border-2 font-bold py-2 px-4 rounded hover:shadow-2xl hover:scale-105"
             >
               {buttonText}
             </motion.button>
