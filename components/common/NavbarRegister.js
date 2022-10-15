@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const NavbarRegister = () => {
   return (
-    <div className='flex justify-between bg-white px-10 py-2'>
+    <div className='flex justify-between bg-white md:px-10 py-2'>
       <Link passHref href="https://pes.edu/">
          <a className="w-[90px] md:w-[500px]">
            <Image

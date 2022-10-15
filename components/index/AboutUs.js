@@ -2,8 +2,8 @@ import Image from 'next/image'
 import Announcement from '../common/Announcement_card'
 import running from './running.svg'
 import manrunning from './manrunning.png'
-import Cards1 from '../common/Cards1'
-import Cards from '../common/Cards'
+import Cards1 from '../common/cards1'
+import Cards from '../common/cards'
 import Event from '../../components/common/Events'
 function AboutUs() {
   return (

@@ -66,7 +66,7 @@ const Navbar = () => {
       >
         <div className="w-full bg-blue">
           <div className="flex items-center h-16 w-full ">
-            <div className="flex items-center mx-12 justify-between w-full">
+            <div className="flex items-center -96 md:mx-12 justify-between w-full">
               <div className="">
                 <Link passHref href="/">
                   <a>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="mr-10 flex md:hidden">
+            <div className="mr-2 flex md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
