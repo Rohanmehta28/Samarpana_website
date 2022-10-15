@@ -66,9 +66,9 @@ const Navbar = () => {
       >
         <div className="w-full bg-blue">
           <div className="flex items-center h-16 w-full ">
-            <div className="flex items-center mx-12 justify-between w-full">
+            <div className="flex items-center -96 md:mx-12 justify-between w-full">
               <div className="">
-                <Link passHref href="https://pes.edu/">
+                <Link passHref href="/">
                   <a>
                     <Image
                       src={sam}
@@ -89,7 +89,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="mr-10 flex md:hidden">
+            <div className="mr-2 flex md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
@@ -149,7 +149,7 @@ const Navbar = () => {
             <div className="md:hidden text-center" id="mobile-menu">
               <div
                 ref={ref}
-                className=" bg-black px-2 pt-2 pb-3 space-y-1 sm:px-3"
+                className="bg-black pt-2 pb-3 space-y-1 sm:px-3"
               >
                 {routes.map((link) => (
                   <NavbarLinkMobile key={link.title} {...link} />

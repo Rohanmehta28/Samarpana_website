@@ -1,11 +1,21 @@
 import Image from 'next/image'
+<<<<<<< HEAD
 import Cards from '../common/Cards'
 import Cards1 from '../common/Cards1'
 import manrunning from './manrunning.png'
+=======
+import Announcement from '../common/Announcement_card'
+import running from './running.svg'
+import manrunning from './manrunning.png'
+import Cards1 from '../common/cards1'
+import Cards from '../common/cards'
+import Event from '../../components/common/Events'
+>>>>>>> ff1b0fec6b029d6ebc2b484bdc2d9ef6220423d0
 function AboutUs() {
   return (
     <div className="relative">
       {/* <div className="text-step-7 md:px-24  text-center">EVENTS</div> */}
+<<<<<<< HEAD
       <div className="relative">
         <div className="flex justify-center content-center">
           <Image src={manrunning} />
@@ -13,6 +23,34 @@ function AboutUs() {
         <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
           <div className="uppercase font-manrope non-italic font-[500] text-[40px] leading-[55px] text-center tracking-[0.14rem] text-[#000]">
             Events
+=======
+      
+      <div className='flex justify-center'>
+        <hr className='border-t-2 border-req-green1 my-10 md:my-12 w-[200px]'></hr>
+      </div>
+      
+      <div className='relative '>
+                <div className='flex justify-center content-center pt-12 '>
+                    <Image src = {manrunning} />
+                </div>
+                <div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'>
+                    <div className="uppercase font-manrope non-italic font-[500] text-[40px] leading-[55px] text-center tracking-[0.14rem] text-[#000] ">
+                        Events
+                    </div>
+                </div>
+            </div>
+      <div >
+      <div class="grid lg:justify-items-center lg:grid-cols-3 pt-9 md:grid-cols-2 ">
+      <Cards route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_164.png" alt="Product"/> 
+      <Cards1 route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_161.png" alt="Product"/>
+      <Cards route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_163.png" alt="Product"/>
+      <Cards route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_164.png" alt="Product"/>
+      <Cards1 route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_161.png" alt="Product"/>
+      <Cards route="events/ev/1.js" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales nunc, platea varius tellus morbi massa vitae. Sagittis placerat egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis lobortis auctor tempus velit consequat." image="/assets/image_161.png" alt="Product"/>
+      </div>
+       <div className="hidden md:block w-2/5 z-50 relative bottom-[550px]">
+          <div className="hidden lg:flex lg:justify-end">
+>>>>>>> ff1b0fec6b029d6ebc2b484bdc2d9ef6220423d0
           </div>
         </div>
       </div>
