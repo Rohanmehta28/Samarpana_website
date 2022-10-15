@@ -9,12 +9,17 @@ function AboutUs() {
   return (
     <div className='relative'>
       {/* <div className="text-step-7 md:px-24  text-center">EVENTS</div> */}
-      <div className='relative'>
-                <div className='flex justify-center content-center pt-12'>
+      
+      <div className='flex justify-center'>
+        <hr className='border-t-2 border-req-green1 my-10 md:my-12 w-[200px]'></hr>
+      </div>
+      
+      <div className='relative '>
+                <div className='flex justify-center content-center pt-12 '>
                     <Image src = {manrunning} />
                 </div>
                 <div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'>
-                    <div className="uppercase font-manrope non-italic font-[500] text-[40px] leading-[55px] text-center tracking-[0.14rem] text-[#000]">
+                    <div className="uppercase font-manrope non-italic font-[500] text-[40px] leading-[55px] text-center tracking-[0.14rem] text-[#000] ">
                         Events
                     </div>
                 </div>
