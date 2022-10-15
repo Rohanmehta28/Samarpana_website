@@ -10,7 +10,7 @@ function AboutUs() {
     <div className='relative'>
       {/* <div className="text-step-7 md:px-24  text-center">EVENTS</div> */}
       <div className='relative'>
-                <div className='flex justify-center content-center'>
+                <div className='flex justify-center content-center pt-12'>
                     <Image src = {manrunning} />
                 </div>
                 <div className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2'>
