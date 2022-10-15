@@ -46,14 +46,14 @@ const Navbar = () => {
 
   const routes = [
     { title: 'Home', path: '/' },
-    { title: "Events", path: '/events' },
+    { title: 'Events', path: '/events' },
     { title: 'Announcements', path: '/announcements' },
     { title: "Samarpana '19", path: '/samarpana-20' },
     { title: 'Registrations', path: '/registrations' },
   ]
 
   return (
-    <div className=''>
+    <div className="">
       <nav
         className="navcontainer"
         style={{
@@ -147,10 +147,7 @@ const Navbar = () => {
         >
           {(ref) => (
             <div className="md:hidden text-center" id="mobile-menu">
-              <div
-                ref={ref}
-                className="bg-black pt-2 pb-3 space-y-1 sm:px-3"
-              >
+              <div ref={ref} className="bg-black pt-2 pb-3 space-y-1 sm:px-3">
                 {routes.map((link) => (
                   <NavbarLinkMobile key={link.title} {...link} />
                 ))}
@@ -158,8 +155,7 @@ const Navbar = () => {
             </div>
           )}
         </Transition>
-      <NavbarRegister/>
-
+        <NavbarRegister />
       </nav>
     </div>
   )

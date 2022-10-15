@@ -70,7 +70,7 @@ export default function OnlineRegisterForm() {
       participant.email === '' ||
       participant.phone === '' ||
       participant.distance === 0 ||
-      participant.utr === '' ||
+      (!participant.pes && participant.utr === '') ||
       participant.dob === ''
     ) {
       toast('Please fill all the fields', { type: 'error' })
@@ -89,7 +89,9 @@ export default function OnlineRegisterForm() {
     // validate phone number
 
     if (!participant.phone.match(/^[0-9]{10}$/)) {
-      toast('Please enter a valid phone number', { type: 'error' })
+      toast('Please enter a valid 10 digit phone number (No +91)', {
+        type: 'error',
+      })
       return false
     }
 
@@ -208,7 +210,7 @@ export default function OnlineRegisterForm() {
 
         {participant.pes ? (
           <>
-            <label className="flex flex-col gap-1">
+            {/* <label className="flex flex-col gap-1">
               Transaction ID
               <input
                 name="utr"
@@ -217,7 +219,7 @@ export default function OnlineRegisterForm() {
                 className="border-2 rounded-md p-2"
                 value={participant.utr}
               />
-            </label>
+            </label> */}
             <label className="flex flex-col gap-1">
               SRN
               <input

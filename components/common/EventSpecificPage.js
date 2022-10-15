@@ -1,188 +1,101 @@
+import { useRouter } from 'next/router'
+import Head from 'next/head'
+import Page from './Page'
 import Image from 'next/image'
-import Page from '../common/Page'
 import manrunning from './manrunning.png'
 
 function EventSpecificPage(props) {
   return (
-    <div>
-      {/* <head> <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Poppins:wght@200;300&display=swap" rel="stylesheet"/></head> */}
-
-      <Page>
-        {/* <h1 className="text-grey text-center text-5xl py-11 font-'Manrope', sans-serif;">EVENTS</h1> */}
-        <div className="relative">
-          <div className="flex justify-center content-center">
-            <Image src={manrunning} />
-          </div>
-          <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
-            <div className="uppercase font-manrope non-italic font-[500] text-[40px] leading-[55px] text-center tracking-[0.14rem] text-[#000]">
-              Events
-            </div>
+    <Page>
+      <div className="relative">
+        <div className="flex justify-center content-center">
+          <Image src={manrunning} />
+        </div>
+        <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+          <div className="uppercase font-manrope non-italic font-[500] text-[40px] leading-[55px] text-center tracking-[0.14rem] text-[#000]">
+            Events
           </div>
         </div>
-        <div style={{ padding: '20px' }}>
-          <Image
-            className="w-full h-1/2 rounded-2xl"
-            src={props.imgUrl}
-            height={'625'}
-            width={'2160'}
-            display={'relative'}
-          />
-          <div className="absolute bottom-20 left-0 right-0 px-4 py-2">
-            <h1
-              className="text-center text-9xl pb-40 font-'Poppins' tracking-wider"
-              style={{ color: '#FFFFFF' }}
-            >
-              {props.eventtitle}
-            </h1>
-            <div style={{ width: '140%' }}></div>
-          </div>
-          <a href="/events">
-            <div
-              style={{
-                /* Vector */
+      </div>
 
-                position: ' relative',
-                width: '60px',
-                height: '60px',
-                left: '1%',
+      <div className="p-4 md:p-10 relative">
+        <img
+          class="w-full h-48 md:h-96 rounded-t-1xl"
+          src={props.imgUrl}
+          alt={props.alt}
+        />
 
-                bottom: '400px',
-
-                background: '#F8F8F8',
-                // transform: "matrix(0, -1, -1, 0, 0, 0)",
-                borderRadius: '50%',
-              }}
-            >
-              <div style={{ position: 'absolute', top: '25%', left: '25%' }}>
-                <Image
-                  src="/assets/arrow.png"
-                  height={30}
-                  width={30}
-                  style={{ margin: 'auto' }}
-                />
-              </div>
-            </div>
-          </a>
-        </div>
-        <div
-          style={{
-            boxSizing: 'border-box',
-            margin: 'auto',
-            width: '563px',
-            height: '95px',
-            border: '4px solid #072642',
-            borderRadius: '15px',
-          }}
-        >
-          <div
-            style={{
-              position: 'relative',
-              top: '50%',
-              transform: 'translateY(-50%)',
-            }}
+        <div class="absolute bottom-7 left-0 right-0 px-4 py-1">
+          <h1
+            className="text-center lg:text-step-9 text-step-8 pb-16 font-'Poppins' tracking-wider"
+            style={{ color: '#FFFFFF' }}
           >
-            <div
+            {props.eventtitle}
+          </h1>
+          <div style={{ width: '140%' }}></div>
+        </div>
+
+        <a href="/events">
+          <div class="absolute top-6 left-6 md:top-16 md:left-16">
+            <Image
+              src="/assets/back.png"
+              height={40}
+              width={40}
+              style={{ margin: 'auto' }}
+            />
+          </div>
+        </a>
+      </div>
+
+      <div className="px-4 sm:px-0 sm:mx-auto w-full sm:w-1/2 lg:w-1/3 h-12 md:h-24 my-4">
+        <div className="h-full rounded-lg border-2 border-black flex gap-4 items-center justify-center">
+          <div className="mt-2">
+            <Image
+              src={'/assets/calendar.png'}
+              height={30}
+              width={30}
               style={{
-                display: 'inline',
-                marginLeft: '160px',
+                margin: 'auto',
               }}
-            >
-              <Image
-                src={'/assets/calendar.png'}
-                height={30}
-                width={30}
-                style={{
-                  margin: 'auto',
-                }}
-              />
-            </div>
-            <div
-              style={{
-                position: 'absolute',
-                top: '25%',
-                transform: 'translateY(-25%)',
-                marginLeft: '20px',
-                display: 'inline',
-              }}
-            >
-              <p
-                className="font-'red-hat'"
-                style={{
-                  display: 'inline',
-                  fontSize: '1.5rem',
-                  color: '#000000',
-                }}
-              >
-                3rd september, 2022
-              </p>
-            </div>
+            />
+          </div>
+          <div>
+            <p className="font-'red-hat' text-step-1 md:text-step-2 lg:text-step-3">
+              3rd september, 2022
+            </p>
           </div>
         </div>
-        <br></br>
-        <br></br>
+      </div>
 
-        <div style={{ marginLeft: '20px', marginRight: '20px' }}>
-          <table>
-            <tr>
-              <td
-                width="50%"
-                leftPadding="40px"
-                style={{ fontFamily: "'Poppins', sansSerif", color: '#000000' }}
-              >
-                {' '}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales
-                nunc, platea varius tellus morbi massa vitae. Sagittis placerat
-                egestas adipiscing mus eleifend nisl. Eget ultrices fusce cursus
-                quis lobortis auctor tempus velit consequat.Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Sodales nunc, platea
-                varius tellus morbi massa vitae. Sagittis placerat egestas
-                adipiscing mus eleifend nisl. Eget ultrices fusce cursus quis
-                lobortis auctor tempus velit consequat.
-              </td>
-              <td align="left" style={{ leftMargin: '10px' }}>
-                <img
-                  className="w-11/12 h-96 rounded-md"
-                  src={props.img2}
-                  alt="product"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td align="left" style={{ leftMargin: '10px' }}>
-                <img
-                  className="w-11/12 h-96 rounded-md"
-                  src={props.img2}
-                  alt="product"
-                />
-              </td>
-              <td width="50%" leftPadding="30px">
-                {' '}
-                <div
-                  leftPadding="30px"
-                  style={{
-                    fontFamily: "'Poppins', sansSerif",
-                    color: '#000000',
-                  }}
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Sodales nunc, platea varius tellus morbi massa vitae. Sagittis
-                  placerat egestas adipiscing mus eleifend nisl. Eget ultrices
-                  fusce cursus quis lobortis auctor tempus velit consequat.Lorem
-                  ipsum dolor sit amet, consectetur adipiscing elit. Sodales
-                  nunc, platea varius tellus morbi massa vitae. Sagittis
-                  placerat egestas adipiscing mus eleifend nisl. Eget ultrices
-                  fusce cursus quis lobortis auctor tempus velit consequat.
-                </div>
-              </td>
-            </tr>
-          </table>
+      <div className="p-4 flex flex-col gap-14 items-center justify-center">
+        <div className="flex flex-col-reverse md:flex-row gap-2 items-center">
+          <div className="md:w-1/2 text-justify md:pr-2">
+            {props.eventDescp1}
+          </div>
+
+          <div className="md:w-1/2">
+            <img
+              class="h-48 md:h-72 lg:h-80 xl:h-96 rounded-md mx-auto"
+              src={props.img1}
+              alt="product"
+            />
+          </div>
         </div>
-      </Page>
-    </div>
+
+        <div className="flex flex-col md:flex-row gap-2 items-center">
+          <div className="md:w-1/2">
+            <img
+              class="h-48 md:h-72 lg:h-80 xl:h-96 rounded-md mx-auto"
+              src={props.img2}
+              alt="product"
+            />
+          </div>
+          <div className="md:w-1/2 text-justify md:pl-2">
+            {props.eventDescp2}
+          </div>
+        </div>
+      </div>
+    </Page>
   )
 }
 export default EventSpecificPage

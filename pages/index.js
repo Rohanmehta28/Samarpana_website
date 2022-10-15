@@ -16,7 +16,6 @@ export default function Home() {
         <Hero />
         <AboutUs />
         <AboutUsNew />
-
       </Page>
     </div>
   )

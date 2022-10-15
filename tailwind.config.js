@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'blue':'#072642',
-        'req-green':'#40B78C',
-        'req-green1':'#5CF3BE',
-        'req-blue':'#072642'
+        blue: '#072642',
+        'req-green': '#40B78C',
+        'req-green1': '#5CF3BE',
+        'req-blue': '#072642',
       },
       fontSize: {
         'step--2': 'clamp(0.99rem, 1.12rem + -0.68vw, 0.64rem)',
@@ -30,13 +30,13 @@ module.exports = {
       },
       fontFamily: {
         'red-hat': ['REDHAT', 'sans-serif'],
-        'manrope':['MANROPE'],
-        'times': ['TIMES-NEW-ROMAN'],
-        'Poppins':['POPPINS']
+        manrope: ['MANROPE'],
+        times: ['TIMES-NEW-ROMAN'],
+        Poppins: ['POPPINS'],
       },
-      backgroundImage:{
-        'image':'./components/index/running2.png'
-      }
+      backgroundImage: {
+        image: './components/index/running2.png',
+      },
     },
   },
   plugins: [],

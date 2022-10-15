@@ -7,7 +7,7 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className="w-full" style={{ width: '100%' }}>
       <Navbar />
       <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} />
