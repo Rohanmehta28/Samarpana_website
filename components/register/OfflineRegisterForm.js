@@ -1,9 +1,8 @@
-// Name, email, phone, PES/Other, 5/10/21k, Name of person collecting
-
 import { addDoc, collection, getFirestore, Timestamp } from 'firebase/firestore'
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
+import { toast } from 'react-toastify'
 import { db } from '../../utils/firebase'
-import { confirm } from './ConfirmDialog'
+import getAge from '../../utils/getAge'
 
 /*
   Registration page
@@ -16,25 +15,53 @@ import { confirm } from './ConfirmDialog'
   */
 export default function OfflineRegisterForm() {
   const formRef = useRef(null)
+  const [age, setAge] = useState(0)
+
+  const agePriceMap = useMemo(() => {
+    return {
+      olderThan22: {
+        5: 600,
+        10: 750,
+        21: 950,
+      },
+      youngerThan22: {
+        5: 400,
+        10: 550,
+        21: 750,
+      },
+    }
+  }, [])
+
   const [participant, setParticipant] = useState({
     name: '',
     email: '',
     phone: '',
     pes: true,
-    distance: 0,
+    is_offline_registration: true,
+    dob: '',
+    distance: '5',
+    srn: '',
+    utr: '',
     collector: '',
   })
 
-  const updateDetails = useCallback(
-    (e) => {
-      setParticipant((prev) => {
-        return { ...prev, [e.target.name]: e.target.value }
-      })
-    },
-    [participant]
-  )
+  const updateDetails = useCallback((e) => {
+    setParticipant((prev) => {
+      let name = e.target.name
+      let value = e.target.value
+      if (name === 'pes') {
+        value = value === 'Yes'
+      } else if (name === 'dob') {
+        let a = getAge(value)
+        setAge(() => a)
+      }
+      console.log(name, value, typeof value)
+      return { ...prev, [name]: value }
+    })
+  }, [])
 
-  const registerParticipant = async () => {
+  const registerParticipant = useCallback(async () => {
+    toast('Registering...')
     const p = { ...participant }
     p.timestamp = Timestamp.fromDate(new Date())
     let fs
@@ -44,23 +71,88 @@ export default function OfflineRegisterForm() {
     } else {
       await addDoc(collection(db, 'participant'), p)
     }
-  }
+    toast('Registered Successfully', { type: 'success' })
+    try {
+      formRef.current.clear()
+    } catch {}
+  }, [participant])
 
-  const handleRegistration = async (e) => {
-    e.preventDefault()
-    if (await confirm('Confirm Registration?')) {
-      try {
-        registerParticipant()
-      } catch {}
-    } else {
-      try {
-        formRef.current.clear()
-      } catch {}
+  const validateData = useCallback((participant) => {
+    if (
+      participant.name === '' ||
+      participant.email === '' ||
+      participant.phone === '' ||
+      participant.distance === 0 ||
+      participant.collector === '' ||
+      participant.dob === ''
+    ) {
+      toast('Please fill all the fields', { type: 'error' })
+      return false
     }
-  }
+
+    if (
+      !participant.email.match(
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      )
+    ) {
+      toast('Please enter a valid email address', { type: 'error' })
+      return false
+    }
+
+    // validate phone number
+
+    if (!participant.phone.match(/^[0-9]{10}$/)) {
+      toast('Please enter a valid phone number', { type: 'error' })
+      return false
+    }
+
+    // validate SRN
+    if (
+      participant.pes === true &&
+      !participant.srn.match(/^(pes|PES)[1-2](ug|UG)(18|19|2[0-2])..\d\d\d/)
+    ) {
+      toast('Please enter a valid SRN', { type: 'error' })
+      return false
+    }
+
+    return true
+  }, [])
+
+  const handleRegistration = useCallback(
+    async (e) => {
+      e.preventDefault()
+
+      if (validateData(participant)) {
+        try {
+          registerParticipant()
+        } catch {}
+      } else {
+        try {
+          formRef.current.clear()
+        } catch {}
+      }
+    },
+    [participant, registerParticipant, validateData, formRef]
+  )
+
+  const handleReset = useCallback(() => {
+    setParticipant(() => ({
+      name: '',
+      email: '',
+      phone: '',
+      pes: true,
+      is_offline_registration: true,
+      dob: '',
+      distance: '5',
+      srn: '',
+      utr: '',
+      collector: '',
+    }))
+    window?.scrollTo({ top: 0 })
+  }, [])
 
   return (
-    <div>
+    <div className="my-10">
       <form
         className="flex flex-col text-lg max-w-xl mx-auto gap-4"
         ref={formRef}
@@ -87,6 +179,7 @@ export default function OfflineRegisterForm() {
             value={participant.email}
           />
         </label>
+
         <label className="flex flex-col gap-1">
           Phone number
           <input
@@ -98,18 +191,49 @@ export default function OfflineRegisterForm() {
             value={participant.phone}
           />
         </label>
+
         <label className="flex flex-col gap-1">
-          Are from PES University?
+          Date Of Birth
+          <input
+            className="border-2 rounded-md p-1"
+            required
+            type="date"
+            name="dob"
+            onChange={updateDetails}
+            value={participant.dob}
+          />
+        </label>
+
+        <label className="flex flex-col gap-1">
+          Are you from PES University?
           <select
             name="pes"
             onChange={updateDetails}
             className="border-2 rounded-md p-2"
-            value={participant.is_pes}
+            value={participant.pes ? 'Yes' : 'No'}
           >
-            <option value="true">Yes</option>
-            <option value="false">No</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
           </select>
         </label>
+
+        {participant.pes ? (
+          <>
+            <label className="flex flex-col gap-1">
+              SRN
+              <input
+                name="srn"
+                onChange={updateDetails}
+                type="text"
+                className="border-2 rounded-md p-2"
+                value={participant.srn}
+              />
+            </label>
+          </>
+        ) : (
+          <></>
+        )}
+
         <label className="flex flex-col gap-1">
           Marathon Distance
           <select
@@ -118,15 +242,16 @@ export default function OfflineRegisterForm() {
             className="border-2 rounded-md p-2"
             value={participant.distance}
           >
-            <option value={5}>5 Km</option>
-            <option value={10}>10 Km</option>
-            <option value={21}>21 Km</option>
+            <option value="5">5 Km</option>
+            <option value="10">10 Km</option>
+            <option value="21">21 Km</option>
           </select>
         </label>
+
         <label className="flex flex-col gap-1">
           Collector
           <select
-            name="distance"
+            name="collector"
             onChange={updateDetails}
             className="border-2 rounded-md p-2"
             value={participant.collector}
@@ -137,7 +262,12 @@ export default function OfflineRegisterForm() {
             <option value="Collector 4">Collector 4</option>
           </select>
         </label>
-
+        <h4 className="font-bold text-step-1 p-2 border-2 border-green-600 rounded-lg text-green-600 my-4">
+          Payment to be done : Rs.
+          {participant.distance && age > 22
+            ? agePriceMap.olderThan22[participant.distance]
+            : agePriceMap.youngerThan22[participant.distance]}
+        </h4>
         <button
           className="font-manrope text-[20px] text-black py-2 px-4 rounded-l-full rounded-r-full mt-5"
           style={{
@@ -146,6 +276,16 @@ export default function OfflineRegisterForm() {
           onClick={handleRegistration}
         >
           Add Runner
+        </button>
+        <button
+          className="font-manrope text-[20px] text-black py-2 px-4 rounded-l-full rounded-r-full mt-5"
+          style={{
+            border: '3px solid #000',
+          }}
+          type="reset"
+          onClick={handleReset}
+        >
+          Clear
         </button>
       </form>
     </div>

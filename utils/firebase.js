@@ -20,11 +20,7 @@ const firebaseConfig = {
 // Initialize Firebase
 
 const app = initializeApp(firebaseConfig)
-let db
 
-if (app) {
-  console.log('App initialized.')
-  db = initializeFirestore(app, {})
-}
+export const db = app ? initializeFirestore(app, {}) : null
 
 // const analytics = getAnalytics(app)
