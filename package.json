@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "makepretty": "npx prettier --write ."
@@ -14,7 +14,7 @@
     "@supabase/supabase-js": "^1.33.3",
     "firebase": "^9.10.0",
     "framer-motion": "^7.3.2",
-    "next": "^12.2.5",
+    "next": "^12.3.1",
     "react": "^18.2.0",
     "react-confirm": "^0.2.3",
     "react-dom": "^18.2.0",

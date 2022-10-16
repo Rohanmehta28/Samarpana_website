@@ -25,12 +25,12 @@ const Navbar = () => {
     if (scrollPosition) setHasInitialised(true)
   }, [scrollPosition])
 
-  const getScrollPosition = () => {
-    const scrollPosition = _document.body.getBoundingClientRect()
-    return scrollPosition.y
-  }
-
   useEffect(() => {
+    const getScrollPosition = () => {
+      const scrollPosition = _document.body.getBoundingClientRect()
+      return scrollPosition.y
+    }
+
     if (_document && scrollPosition != null) {
       const handleScroll = () => {
         const currentScrollPosition = getScrollPosition()
@@ -42,7 +42,7 @@ const Navbar = () => {
       window.addEventListener('scroll', handleScroll)
       return () => window.removeEventListener('scroll', handleScroll)
     }
-  }, [sticky, hasInitialised, scrollPosition])
+  }, [sticky, hasInitialised, scrollPosition, _document])
 
   const routes = [
     { title: 'Home', path: '/' },
@@ -71,6 +71,7 @@ const Navbar = () => {
                 <Link passHref href="/">
                   <a>
                     <Image
+                      unoptimized
                       src={sam}
                       width={120}
                       height={50}

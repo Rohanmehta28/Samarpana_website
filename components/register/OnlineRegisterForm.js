@@ -124,6 +124,9 @@ export default function OnlineRegisterForm() {
         formRef.current.clear()
       } catch {}
     }
+
+    if (participant.pes) {
+    }
   }
 
   return (

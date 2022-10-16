@@ -34,6 +34,7 @@ function OtherPaymentDetails({ age, distance }) {
           <li className="border-t-2 pt-4">
             <p className="font-bold text-step-0 my-3">Method 1 : UPI</p>
             <Image
+              unoptimized
               src="/assets/PES_UPI.jpeg"
               alt="QR CODE"
               layout="responsive"

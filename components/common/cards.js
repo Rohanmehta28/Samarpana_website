@@ -12,7 +12,7 @@ function Cards(props) {
       </div>
       <div className="flex flex-col justify-center items-center">
         <div className="  p-8">
-          <Link href={props.route}>
+          <Link href={props.route} passHref>
             <button className=" bg-white hover:  justify-center text-blue-900 font-semibold py-2 px-16 border-[2px] border-[#2b4053] hover:border-[#7DBEC2] hover:bg-[#2b4053] hover:text-white">
               READ MORE
             </button>

@@ -1,15 +1,14 @@
-import { useRouter } from 'next/router'
-import Head from 'next/head'
-import Page from './Page'
 import Image from 'next/image'
+import Link from 'next/link'
 import manrunning from './manrunning.png'
+import Page from './Page'
 
 function EventSpecificPage(props) {
   return (
     <Page>
       <div className="relative">
         <div className="flex justify-center content-center">
-          <Image src={manrunning} />
+          <Image unoptimized alt="picture didnt load" src={manrunning} />
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
           <div className="uppercase font-manrope non-italic font-[500] text-[40px] leading-[55px] text-center tracking-[0.14rem] text-[#000]">
@@ -20,12 +19,12 @@ function EventSpecificPage(props) {
 
       <div className="p-4 md:p-10 relative">
         <img
-          class="w-full h-48 md:h-96 rounded-t-1xl"
+          className="w-full h-48 md:h-96 rounded-t-1xl"
           src={props.imgUrl}
           alt={props.alt}
         />
 
-        <div class="absolute bottom-7 left-0 right-0 px-4 py-1">
+        <div className="absolute bottom-7 left-0 right-0 px-4 py-1">
           <h1
             className="text-center lg:text-step-9 text-step-8 pb-16 font-'Poppins' tracking-wider"
             style={{ color: '#FFFFFF' }}
@@ -35,22 +34,26 @@ function EventSpecificPage(props) {
           <div style={{ width: '140%' }}></div>
         </div>
 
-        <a href="/events">
-          <div class="absolute top-6 left-6 md:top-16 md:left-16">
+        <Link href="/events" passHref>
+          <div className="absolute top-6 left-6 md:top-16 md:left-16">
             <Image
+              unoptimized
+              alt="picture didnt load"
               src="/assets/back.png"
               height={40}
               width={40}
               style={{ margin: 'auto' }}
             />
           </div>
-        </a>
+        </Link>
       </div>
 
       <div className="px-4 sm:px-0 sm:mx-auto w-full sm:w-1/2 lg:w-1/3 h-12 md:h-24 my-4">
         <div className="h-full rounded-lg border-2 border-black flex gap-4 items-center justify-center">
           <div className="mt-2">
             <Image
+              unoptimized
+              alt="picture didnt load"
               src={'/assets/calendar.png'}
               height={30}
               width={30}
@@ -75,7 +78,7 @@ function EventSpecificPage(props) {
 
           <div className="md:w-1/2">
             <img
-              class="h-48 md:h-72 lg:h-80 xl:h-96 rounded-md mx-auto"
+              className="h-48 md:h-72 lg:h-80 xl:h-96 rounded-md mx-auto"
               src={props.img1}
               alt="product"
             />
@@ -85,7 +88,7 @@ function EventSpecificPage(props) {
         <div className="flex flex-col md:flex-row gap-2 items-center">
           <div className="md:w-1/2">
             <img
-              class="h-48 md:h-72 lg:h-80 xl:h-96 rounded-md mx-auto"
+              className="h-48 md:h-72 lg:h-80 xl:h-96 rounded-md mx-auto"
               src={props.img2}
               alt="product"
             />

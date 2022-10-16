@@ -1,15 +1,15 @@
 import Image from 'next/image'
-import manrunning from './manrunning.png'
 import eventCardImgOne from './eventcardimg01.png'
 import eventCardImgTwo from './eventcardimg02.png'
 import eventCardImgThree from './eventcardimg03.png'
+import manrunning from './manrunning.png'
 
 function EventsHome() {
   return (
     <div name="events-homepage" className="pt-96">
       <div className="relative">
         <div className="flex justify-center content-center">
-          <Image src={manrunning} />
+          <Image unoptimized alt="picture didnt load" src={manrunning} />
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
           <div className="uppercase font-manrope non-italic font-[500] text-[40px] leading-[55px] text-center tracking-[0.14rem] text-[#000]">
@@ -23,7 +23,12 @@ function EventsHome() {
           name="event-card-1"
           className="mx-auto my-[5%] max-w-[20%] rounded overflow-hidden shadow-lg"
         >
-          <Image src={eventCardImgOne} className="" />
+          <Image
+            unoptimized
+            alt="picture didnt load"
+            src={eventCardImgOne}
+            className=""
+          />
           <div className="px-6 py-4">
             <p className="text-base text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales
@@ -43,7 +48,12 @@ function EventsHome() {
           name="event-card-2"
           className="mx-auto my-[5%] max-w-[20%] rounded overflow-hidden shadow-lg"
         >
-          <Image src={eventCardImgTwo} className="" />
+          <Image
+            unoptimized
+            alt="picture didnt load"
+            src={eventCardImgTwo}
+            className=""
+          />
           <div className="px-6 py-4">
             <p className="text-base text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales
@@ -63,7 +73,12 @@ function EventsHome() {
           name="event-card-3"
           className="mx-auto my-[5%] max-w-[20%] rounded overflow-hidden shadow-lg"
         >
-          <Image src={eventCardImgThree} className="" />
+          <Image
+            unoptimized
+            alt="picture didnt load"
+            src={eventCardImgThree}
+            className=""
+          />
           <div className="px-6 py-4">
             <p className="text-base text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales
@@ -85,7 +100,12 @@ function EventsHome() {
           name="event-card-1"
           className="mx-auto my-[5%] max-w-[20%] rounded overflow-hidden shadow-lg"
         >
-          <Image src={eventCardImgOne} className="" />
+          <Image
+            unoptimized
+            alt="picture didnt load"
+            src={eventCardImgOne}
+            className=""
+          />
           <div className="px-6 py-4">
             <p className="text-base text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales
@@ -105,7 +125,12 @@ function EventsHome() {
           name="event-card-2"
           className="mx-auto my-[5%] max-w-[20%] rounded overflow-hidden shadow-lg"
         >
-          <Image src={eventCardImgTwo} className="" />
+          <Image
+            unoptimized
+            alt="picture didnt load"
+            src={eventCardImgTwo}
+            className=""
+          />
           <div className="px-6 py-4">
             <p className="text-base text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales
@@ -125,7 +150,12 @@ function EventsHome() {
           name="event-card-3"
           className="mx-auto my-[5%] max-w-[20%] rounded overflow-hidden shadow-lg"
         >
-          <Image src={eventCardImgThree} className="" />
+          <Image
+            unoptimized
+            alt="picture didnt load"
+            src={eventCardImgThree}
+            className=""
+          />
           <div className="px-6 py-4">
             <p className="text-base text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales

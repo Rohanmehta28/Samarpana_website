@@ -24,6 +24,7 @@ export default function Letter(props) {
         }}
       >
         <Image
+          unoptimized
           layout="fill"
           src={props.url}
           alt={props.url}

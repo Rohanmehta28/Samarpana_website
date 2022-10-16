@@ -1,5 +1,3 @@
-import React from 'react'
-
 function PESPaymentDetails() {
   return (
     <div className="p-4 border-2 border-slate-500 rounded-lg">
@@ -16,7 +14,7 @@ function PESPaymentDetails() {
           </li>
           <li className="list-decimal">Miscellanous Fees Tab/Section</li>
           <li className="list-decimal">
-            Select <b>"Samarpana Run"</b> under <b>Category</b>
+            Select <b>Samarpana Run</b> under <b>Category</b>
           </li>
           <li className="list-decimal">
             Select the <b>distance</b> under <b>Sub-Category</b>

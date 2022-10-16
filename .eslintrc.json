@@ -3,7 +3,7 @@
   "overrides": [
     {
       "files": ["**/*.js", "**/*.jsx"],
-      "excludedFiles": ["./.next"],
+      "excludedFiles": [".next"],
       "extends": ["plugin:prettier/recommended"],
       "rules": {
         "prettier/prettier": [
@@ -12,7 +12,8 @@
             "endOfLine": "auto"
           },
           { "usePrettierrc": true }
-        ]
+        ],
+        "@next/next/no-img-element": "off"
       }
     }
   ]

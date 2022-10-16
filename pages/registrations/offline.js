@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Page from '../../components/common/Page'
 import OfflineRegisterForm from '../../components/register/OfflineRegisterForm'
 
-export default function offlineReg() {
+export default function OfflineReg() {
   const [password, setPassword] = useState('')
   const [loggedIn, setLoggedIn] = useState(false)
 
