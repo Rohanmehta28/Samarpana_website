@@ -16,7 +16,7 @@ function Ev(props) {
 }
 
 export async function getStaticPaths() {
-  console.log(events)
+  // console.log(events)
   const keys = Object.keys(events)
   const paths = keys.map((key) => ({ params: { eventId: key } }))
   return {

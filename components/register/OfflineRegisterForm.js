@@ -55,7 +55,7 @@ export default function OfflineRegisterForm() {
         let a = getAge(value)
         setAge(() => a)
       }
-      console.log(name, value, typeof value)
+      // console.log(name, value, typeof value)
       return { ...prev, [name]: value }
     })
   }, [])

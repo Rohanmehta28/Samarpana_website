@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="w-full" style={{ width: '100%' }}>
       <Navbar />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         <Component {...pageProps} />
       </AnimatePresence>
 
