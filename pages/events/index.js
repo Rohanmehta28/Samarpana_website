@@ -4,12 +4,13 @@ import Page from '../../components/common/Page'
 import { events } from '../../utils/events'
 
 function Events() {
+  console.log(Object.keys(events))
   return (
     <>
       <Head>
         <title>Samarpana 2022 | Events</title>
         <meta name="description" content="" />
-        <link rel="icon" href="/at22_icon.ico" />
+        <link rel="icon" href="/samarpana.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,10 +22,10 @@ function Events() {
       </Head>
       <Page>
         <h1
-          className="text-grey text-center text-5xl font-'Manrope', sans-serif;"
+          className="text-grey text-center md:text-5xl text-4xl py-4 font-medium"
           style={{ paddingBottom: '5%' }}
         >
-          EVENTS
+          Events
         </h1>
         <div
           className="grid xlg:justify-items-center md:grid gap-10 pl-8 pr-8 pb-8"
@@ -35,6 +36,8 @@ function Events() {
         >
           {Object.keys(events).map((e) => {
             const ev = events[e]
+            // console.log(e)
+
             return (
               <Event
                 key={ev.next}

@@ -43,7 +43,7 @@ const nextConfig = {
         page: '/events/ev/[eventId]',
         params: { eventId: 'samarpana-talks' },
       },
-      '/samarpana-20': { page: '/samarpana-20' },
+      '/samarpana-19': { page: '/samarpana-19' },
       '/registrations': { page: '/registrations' },
       '/registrations/offline': { page: '/registrations/offline' },
     }

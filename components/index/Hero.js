@@ -28,17 +28,17 @@ function Hero() {
             alt="samarpana image"
           />
         </div>
-        <div className="md:text-[25px] md:text-lg text-[12px] font-manrope text-white text-center tracking-widest stroke-black stroke-2 lg:px-96 px-16">
+        <div className="md:text-[20px] text-[10px] py-4 font-manrope text-white text-center tracking-widest stroke-black stroke-2 lg:px-80 px-8">
           Samarpana, a student-run initiative of PES University, works for the
           benefit of martyrs{"'"}families by raising awareness and collecting
           funds through Marathons and other fun events.
         </div>
-        <div className="flex justify-center md:pt-48 pt-8">
+        <div className="flex justify-center md:pt-24 pb-8 pt-8">
           <Link href="/registrations" passHref>
             <button
-              className="font-manrope text-[20px] text-white md:py-3 md:px-24 px-12 py-2 rounded-l-full rounded-r-full"
+              className="font-manrope md:text-[20px] text-white md:py-3 md:px-24 px-12 py-2 rounded-l-full rounded-r-full"
               style={{
-                border: '3px solid #5CF3BE',
+                border: '1px solid #5CF3BE',
               }}
             >
               Register

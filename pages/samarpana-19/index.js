@@ -9,17 +9,18 @@ export default function Samarpana20() {
       <Head>
         <title>Samarpana 2022 | Samarpana 19</title>
         <meta name="description" content="" />
-        <link rel="icon" href="/at22_icon.ico" />
+        <link rel="icon" href="/samarpana.ico" />
       </Head>
       <Page nopadding>
-        <div className="flex justify-center font-manrope font-bold text-[50px] py-20">
-          Samarpana 2019
+        <div className="text-grey text-center md:text-5xl text-4xl py-11 font-medium">
+          Samarpana &apos;19
         </div>
-        <div className="lg:columns-3 md:columns-2 columns-1 gap-2 px-16 pb-24">
+        <div className="lg:columns-3 md:columns-2 columns-2 gap-2 lg:px-16 md:px-16 px-8 pb-24">
           {images.map((item) => {
             return (
               <div className="mb-4" key={item}>
                 <Image
+                  className="rounded-xl"
                   unoptimized
                   src={item}
                   layout={'responsive'}

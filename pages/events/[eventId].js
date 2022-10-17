@@ -1,5 +1,5 @@
-import EventSpecificPage from '../../../components/common/EventSpecificPage'
-import { events } from '../../../utils/events'
+import EventSpecificPage from '../../components/common/EventSpecificPage'
+import { events } from '../../utils/events'
 
 function Ev(props) {
   return (
@@ -18,6 +18,7 @@ function Ev(props) {
 export async function getStaticPaths() {
   // console.log(events)
   const keys = Object.keys(events)
+  // console.log(keys)
   const paths = keys.map((key) => ({ params: { eventId: key } }))
   return {
     paths: [...paths],
@@ -27,8 +28,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   let id = context.params.eventId
+
   let props = {
-    event: events[id],
+    event: events[id] || null,
   }
   return {
     props,

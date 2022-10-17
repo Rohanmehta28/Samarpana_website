@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>Samarpana 2022</title>
         <meta name="description" content="" />
-        <link rel="icon" href="/at22_icon.ico" />
+        <link rel="icon" href="/samarpana.ico" />
       </Head>
       <Page nopadding>
         <Hero />

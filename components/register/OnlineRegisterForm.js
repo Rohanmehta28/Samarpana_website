@@ -64,7 +64,7 @@ export default function OnlineRegisterForm() {
     } catch {}
   }, [participant, formRef])
 
-  const validateData = useCallback((participant) => {
+  const validateData = useCallback((participant, age) => {
     if (
       participant.name === '' ||
       participant.email === '' ||
@@ -83,6 +83,13 @@ export default function OnlineRegisterForm() {
       )
     ) {
       toast('Please enter a valid email address', { type: 'error' })
+      return false
+    }
+    console.log(age)
+    if (age < 5) {
+      toast('Please enter valid DOB (>5 years)', {
+        type: 'error',
+      })
       return false
     }
 
@@ -115,7 +122,7 @@ export default function OnlineRegisterForm() {
   const handleRegistration = async (e) => {
     e.preventDefault()
 
-    if (validateData(participant)) {
+    if (validateData(participant, age)) {
       try {
         registerParticipant()
       } catch {}
@@ -199,6 +206,7 @@ export default function OnlineRegisterForm() {
             className="border-2 rounded-md p-2"
             value={participant.distance}
           >
+            <option value=""></option>
             <option value="5">5 Km</option>
             <option value="10">10 Km</option>
             <option value="21">21 Km</option>

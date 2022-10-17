@@ -8,11 +8,11 @@ export default function Announcements() {
       <Head>
         <title>Samarpana 2022 | Announcements</title>
         <meta name="description" content="" />
-        <link rel="icon" href="/at22_icon.ico" />
+        <link rel="icon" href="/samarpana.ico" />
       </Head>
       <Page nopadding>
         <div className="min-h-screen">
-          <h1 className="text-grey text-center text-5xl py-11 font-medium">
+          <h1 className="text-grey text-center md:text-5xl text-4xl py-11 font-medium">
             Announcements
           </h1>
           <Announcement />

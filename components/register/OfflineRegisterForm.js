@@ -77,7 +77,7 @@ export default function OfflineRegisterForm() {
     } catch {}
   }, [participant])
 
-  const validateData = useCallback((participant) => {
+  const validateData = useCallback((participant, age) => {
     if (
       participant.name === '' ||
       participant.email === '' ||
@@ -89,7 +89,12 @@ export default function OfflineRegisterForm() {
       toast('Please fill all the fields', { type: 'error' })
       return false
     }
-
+    if (age < 5) {
+      toast('Please enter valid DOB (>5 years)', {
+        type: 'error',
+      })
+      return false
+    }
     if (
       !participant.email.match(
         /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -122,7 +127,7 @@ export default function OfflineRegisterForm() {
     async (e) => {
       e.preventDefault()
 
-      if (validateData(participant)) {
+      if (validateData(participant, age)) {
         try {
           registerParticipant()
         } catch {}
@@ -242,6 +247,7 @@ export default function OfflineRegisterForm() {
             className="border-2 rounded-md p-2"
             value={participant.distance}
           >
+            <option value=""></option>
             <option value="5">5 Km</option>
             <option value="10">10 Km</option>
             <option value="21">21 Km</option>
@@ -256,6 +262,7 @@ export default function OfflineRegisterForm() {
             className="border-2 rounded-md p-2"
             value={participant.collector}
           >
+            <option value=""></option>
             <option value="Collector 1">Collector 1</option>
             <option value="Collector 2">Collector 2</option>
             <option value="Collector 3">Collector 3</option>

@@ -11,15 +11,17 @@ function AboutUs() {
       <div className="grid lg:justify-items-center lg:grid-cols-3 pt-9 md:grid-cols-2 ">
         {Object.keys(events).map((e) => {
           const ev = events[e]
-          return (
-            <Cards
-              key={ev.next}
-              route={ev.next}
-              description={ev.eventdescription}
-              image={ev.image}
-              alt={ev.eventtitle}
-            />
-          )
+          if (e !== 'testimonials') {
+            return (
+              <Cards
+                key={ev.next}
+                route={ev.next}
+                description={ev.eventdescription}
+                image={ev.image1}
+                alt={ev.eventtitle}
+              />
+            )
+          }
         })}
       </div>
     </div>

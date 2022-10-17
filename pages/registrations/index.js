@@ -8,10 +8,10 @@ export default function Registrations() {
       <Head>
         <title>Samarpana 2022 | Registrations</title>
         <meta name="description" content="" />
-        <link rel="icon" href="/at22_icon.ico" />
+        <link rel="icon" href="/samarpana.ico" />
       </Head>
       <Page nopadding>
-        <h1 className="text-grey text-center text-5xl py-11 font-medium">
+        <h1 className="text-grey text-center md:text-5xl text-4xl py-11 font-medium">
           Registration
         </h1>
         <div className="flex flex-col">

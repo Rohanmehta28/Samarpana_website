@@ -48,7 +48,7 @@ const Navbar = () => {
     { title: 'Home', path: '/' },
     { title: 'Events', path: '/events' },
     { title: 'Announcements', path: '/announcements' },
-    { title: "Samarpana '19", path: '/samarpana-20' },
+    { title: "Samarpana '19", path: '/samarpana-19' },
     { title: 'Registrations', path: '/registrations' },
   ]
 
@@ -66,15 +66,15 @@ const Navbar = () => {
       >
         <div className="w-full bg-blue">
           <div className="flex items-center h-16 w-full ">
-            <div className="flex items-center -96 md:mx-12 justify-between w-full">
-              <div className="">
+            <div className="flex items-center -96 md:mx-12 mx-2 justify-between w-full">
+              <div className="md:w-36 w-24">
                 <Link passHref href="/">
                   <a>
                     <Image
                       unoptimized
                       src={sam}
-                      width={120}
-                      height={50}
+                      // width={120}
+                      // height={50}
                       layout="intrinsic"
                       alt="PES Logo"
                       // className="invert placeholder-yellow-300 logo "

@@ -5,10 +5,10 @@ import soldiers from './soldiers.png'
 function AboutUsNew() {
   return (
     <>
-      <div className="uppercase font-manrope non-italic font-[600] text-[40px] leading-[55px] text-center tracking-[0.14em] 2xl:text-[3em] text-[#2B4053] pb-10">
+      <div className="uppercase font-manrope non-italic font-[600] md:text-[40px] text-[30px] leading-[55px] text-center tracking-[0.14em] 2xl:text-[3em] text-[#2B4053] md:pb-10 pb-2">
         About Us
       </div>
-      <div className="relative w-screen md:h-screen h-96">
+      <div className="relative w-screen md:h-screen h-80">
         <div className="absolute w-screen md:h-full h-full">
           <Image
             unoptimized

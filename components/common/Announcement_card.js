@@ -18,7 +18,7 @@ function Announcement(props) {
 
   return (
     <div className="flex justify-center">
-      <div className="w-4/5 sm:w-1/2 rounded-xl border-gray-200 border-2 overflow-hidden shadow-md hover:shadow-2xl hover:scale-105 bg-white-300 m-8">
+      <div className="w-4/5 sm:w-1/2 rounded-xl border-gray-200 border-2 overflow-hidden shadow-md hover:shadow-2xl hover:scale-105 bg-white-300 m-2 ">
         <div className="px-6 sm:px-6 py-4">
           <div className="font-bold text-xl mb-2">SAMARPANA LAUNCH</div>
           <p className="text-gray-700 text-base">
@@ -31,7 +31,7 @@ function Announcement(props) {
         <div className="block pb-4 sm:flex justify-center">
           <div className=" flex justify-left w-full px-6">
             <div className="h-[36px] text-center object-cover mt-2 mb-4 bg-gray-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700">
-              26/8/2022
+              17/10/2022
             </div>
             <div className="h-[36px] w-3/4 lg:flex lg:justify-end lg:w-full mx-0  pl-[20%] ">
               <motion.button
