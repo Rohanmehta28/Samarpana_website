@@ -18,7 +18,6 @@ import PESPaymentDetails from './PESPaymentDetails'
 export default function OnlineRegisterForm() {
   const formRef = useRef(null)
   const [age, setAge] = useState(0)
-
   const [participant, setParticipant] = useState({
     name: '',
     email: '',
@@ -52,13 +51,23 @@ export default function OnlineRegisterForm() {
     const p = { ...participant }
     p.timestamp = Timestamp.fromDate(new Date())
     let fs
+
     if (!db) {
       fs = getFirestore()
       await addDoc(collection(fs, 'participant'), p)
     } else {
       await addDoc(collection(db, 'participant'), p)
     }
+
     toast('Registered Successfully', { type: 'success' })
+
+    // if (participant.pes) {
+    //   toast('NOTE : You will now be redirected to PESU Academy for the payment.')
+    //   setTimeout(() => {
+    //     window.open('https://www.pesuacademy.com/Academy/', '_blank')
+    //   }, 2000)
+    // }
+
     try {
       formRef.current.clear()
     } catch {}
@@ -70,6 +79,8 @@ export default function OnlineRegisterForm() {
       participant.email === '' ||
       participant.phone === '' ||
       participant.distance === 0 ||
+      participant.distance === '' ||
+      participant.distance === '0' ||
       (!participant.pes && participant.utr === '') ||
       participant.dob === ''
     ) {
@@ -124,22 +135,22 @@ export default function OnlineRegisterForm() {
     return true
   }, [])
 
-  const handleRegistration = async (e) => {
-    e.preventDefault()
+  const handleRegistration = useCallback(
+    async (e) => {
+      e.preventDefault()
 
-    if (validateData(participant, age)) {
-      try {
-        registerParticipant()
-      } catch {}
-    } else {
-      try {
-        formRef.current.clear()
-      } catch {}
-    }
-
-    if (participant.pes) {
-    }
-  }
+      if (validateData(participant, age)) {
+        try {
+          registerParticipant()
+        } catch {}
+      } else {
+        try {
+          formRef.current.clear()
+        } catch {}
+      }
+    },
+    [age, participant, registerParticipant, formRef, validateData]
+  )
 
   return (
     <div className="m-6 md:m-10">
@@ -211,7 +222,6 @@ export default function OnlineRegisterForm() {
             className="border-2 rounded-md p-2"
             value={participant.distance}
           >
-            <option value=""></option>
             <option value="5">5 Km</option>
             <option value="10">10 Km</option>
             <option value="21">21 Km</option>

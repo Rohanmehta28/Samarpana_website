@@ -83,6 +83,8 @@ export default function OfflineRegisterForm() {
       participant.email === '' ||
       participant.phone === '' ||
       participant.distance === 0 ||
+      participant.distance === '' ||
+      participant.distance === '0' ||
       participant.collector === '' ||
       participant.dob === ''
     ) {
@@ -137,7 +139,7 @@ export default function OfflineRegisterForm() {
         } catch {}
       }
     },
-    [participant, registerParticipant, validateData, formRef]
+    [participant, registerParticipant, validateData, formRef, age]
   )
 
   const handleReset = useCallback(() => {
