@@ -103,12 +103,17 @@ export default function OnlineRegisterForm() {
     }
 
     // validate SRN
-    if (
-      participant.pes === true &&
-      !participant.srn.match(/^(pes|PES)[1-2](ug|UG)(18|19|2[0-2])..\d\d\d/)
-    ) {
-      toast('Please enter a valid SRN', { type: 'error' })
-      return false
+    if (participant.pes === true) {
+      if (
+        !(
+          participant.srn.match(
+            /^(pes|PES)[1-2](ug|UG)(18|19|2[0-2])..\d\d\d/
+          ) || participant.srn.match(/^(pes|PES)\d\d\d\d\d\d\d\d\d\d/)
+        )
+      ) {
+        toast('Please enter a valid SRN/ PRN', { type: 'error' })
+        return false
+      }
     }
 
     // validate utr
@@ -232,7 +237,7 @@ export default function OnlineRegisterForm() {
               />
             </label> */}
             <label className="flex flex-col gap-1">
-              SRN
+              SRN/ PRN
               <input
                 name="srn"
                 onChange={updateDetails}

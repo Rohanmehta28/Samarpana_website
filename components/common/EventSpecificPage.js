@@ -33,7 +33,7 @@ function EventSpecificPage(props) {
 
           <div className="absolute md:bottom-24 bottom-6 left-0 right-0 px-4 py-1">
             <h1
-              className="text-center lg:text-step-9 text-step-8 pb-16 font-'Poppins' tracking-wider"
+              className="text-center lg:text-step-9 text-step-5 lg:pb-16 pb-14 font-'Poppins' tracking-wider"
               style={{ color: '#FFFFFF' }}
             >
               {props.eventtitle}

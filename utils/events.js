@@ -15,6 +15,22 @@ export const events = {
     eventdescription:
       'This run aims at bridging the gap between civil society and the Armed Forces, hence creating awareness among all citizens about the sacrifices of our martyrs and their families',
   },
+  felicitation: {
+    imgUrl: '/assets/felicitation.png',
+    date: 'Coming Soon',
+    img1: '/assets/felicitation1.png',
+    img2: '/assets/felicitation2.png',
+    eventtitle: 'Felicitations',
+    eventDescp1:
+      'In the past felicitations, dignitaries like: Maj. Gen. Arjun Mutanna, Maj. Gen. (Retd.) Paul, Shri Santosh Hegde and Col. (Retd.) Ranjan have graced us with their presence.',
+    eventDescp2:
+      'In 2017, a felicitation ceremony was organized, graced by Shri Raghavendra H Auradkar, Assistant DGP. In an initiative to resurrect the lost memories of our great heroes, families of 16 army men and 4 policemen were extended a total of Rs.4 Lakh for the well-being of the families.',
+    image: '/assets/felicitation.png',
+    image1: '/assets/h_felicitation.png',
+    next: '/events/felicitation',
+    eventdescription:
+      'In the past felicitations, dignitaries like: Maj. Gen. Arjun Mutanna, Maj. Gen. (Retd.) Paul, Shri Santosh Hegde and Col. (Retd.) Ranjan have graced us with their presence.',
+  },
   'workshops-and-legal-aids': {
     imgUrl: '/assets/workshop.png',
     date: 'Coming Soon',
@@ -109,21 +125,5 @@ export const events = {
     next: '/events/samarpana-talks',
     eventdescription:
       'A session where eminent guest speakers from the army share their experiences with the students and the army community. The guest speakers discuss the various facets of life.',
-  },
-  felicitation: {
-    imgUrl: '/assets/felicitation.png',
-    date: 'Coming Soon',
-    img1: '/assets/felicitation1.png',
-    img2: '/assets/felicitation2.png',
-    eventtitle: 'Felicitations',
-    eventDescp1:
-      'In the past felicitations, dignitaries like: Maj. Gen. Arjun Mutanna, Maj. Gen. (Retd.) Paul, Shri Santosh Hegde and Col. (Retd.) Ranjan have graced us with their presence.',
-    eventDescp2:
-      'In 2017, a felicitation ceremony was organized, graced by Shri Raghavendra H Auradkar, Assistant DGP. In an initiative to resurrect the lost memories of our great heroes, families of 16 army men and 4 policemen were extended a total of Rs.4 Lakh for the well-being of the families.',
-    image: '/assets/felicitation.png',
-    image1: '/assets/h_felicitation.png',
-    next: '/events/felicitation',
-    eventdescription:
-      'In the past felicitations, dignitaries like: Maj. Gen. Arjun Mutanna, Maj. Gen. (Retd.) Paul, Shri Santosh Hegde and Col. (Retd.) Ranjan have graced us with their presence.',
   },
 }
