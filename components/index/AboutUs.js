@@ -11,7 +11,7 @@ function AboutUs() {
       <div className="grid lg:justify-items-center lg:grid-cols-3 pt-9 md:grid-cols-2 ">
         {Object.keys(events).map((e) => {
           const ev = events[e]
-          if (e !== 'testimonials') {
+          if (e !== 'testimonials' && e != 'workshops-and-legal-aids') {
             return (
               <Cards
                 key={ev.next}

@@ -42,7 +42,7 @@ function EventSpecificPage(props) {
           </div>
 
           <Link href="/events" passHref>
-            <div className="absolute top-6 left-6 md:top-16 md:left-16">
+            <div className="absolute top-6 left-6 md:top-16 md:left-16 cursor-pointer">
               <Image
                 unoptimized
                 alt="picture didnt load"
