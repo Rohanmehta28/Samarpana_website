@@ -114,12 +114,17 @@ export default function OfflineRegisterForm() {
     }
 
     // validate SRN
-    if (
-      participant.pes === true &&
-      !participant.srn.match(/^(pes|PES)[1-2](ug|UG)(18|19|2[0-2])..\d\d\d/)
-    ) {
-      toast('Please enter a valid SRN', { type: 'error' })
-      return false
+    if (participant.pes === true) {
+      if (
+        !(
+          participant.srn.match(
+            /^(pes|PES)[1-2](ug|UG)(18|19|2[0-2])..\d\d\d/
+          ) || participant.srn.match(/^(pes|PES)\d\d\d\d\d\d\d\d\d\d/)
+        )
+      ) {
+        toast('Please enter a valid SRN/ PRN', { type: 'error' })
+        return false
+      }
     }
 
     return true
@@ -265,10 +270,11 @@ export default function OfflineRegisterForm() {
             value={participant.collector}
           >
             <option value=""></option>
-            <option value="Collector 1">Collector 1</option>
-            <option value="Collector 2">Collector 2</option>
-            <option value="Collector 3">Collector 3</option>
-            <option value="Collector 4">Collector 4</option>
+            <option value="Akarsh Anil Kumar">Akarsh Anil Kumar</option>
+            <option value="Naitik">Naitik</option>
+            <option value="Soumya">Soumya</option>
+            <option value="Akanksha">Akanksha</option>
+            <option value="Khushi">Khushi</option>
           </select>
         </label>
         <h4 className="font-bold text-step-1 p-2 border-2 border-green-600 rounded-lg text-green-600 my-4">
