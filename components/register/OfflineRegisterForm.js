@@ -129,24 +129,6 @@ export default function OfflineRegisterForm() {
 
     return true
   }, [])
-
-  const handleRegistration = useCallback(
-    async (e) => {
-      e.preventDefault()
-
-      if (validateData(participant, age)) {
-        try {
-          registerParticipant()
-        } catch {}
-      } else {
-        try {
-          formRef.current.clear()
-        } catch {}
-      }
-    },
-    [participant, registerParticipant, validateData, formRef, age]
-  )
-
   const handleReset = useCallback(() => {
     setParticipant(() => ({
       name: '',
@@ -162,6 +144,24 @@ export default function OfflineRegisterForm() {
     }))
     window?.scrollTo({ top: 0 })
   }, [])
+
+  const handleRegistration = useCallback(
+    async (e) => {
+      e.preventDefault()
+
+      if (validateData(participant, age)) {
+        try {
+          registerParticipant()
+          handleReset()
+        } catch {}
+      } else {
+        try {
+          formRef.current.clear()
+        } catch {}
+      }
+    },
+    [participant, registerParticipant, validateData, formRef, age, handleReset]
+  )
 
   return (
     <div className="my-10">

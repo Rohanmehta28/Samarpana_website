@@ -135,6 +135,22 @@ export default function OnlineRegisterForm() {
     return true
   }, [])
 
+  const handleReset = useCallback(() => {
+    setParticipant(() => ({
+      name: '',
+      email: '',
+      phone: '',
+      pes: true,
+      is_offline_registration: false,
+      dob: '',
+      distance: '5',
+      srn: '',
+      utr: '',
+      collector: 'PES',
+    }))
+    window?.scrollTo({ top: 0 })
+  }, [])
+
   const handleRegistration = useCallback(
     async (e) => {
       e.preventDefault()
@@ -142,6 +158,7 @@ export default function OnlineRegisterForm() {
       if (validateData(participant, age)) {
         try {
           registerParticipant()
+          handleReset()
         } catch {}
       } else {
         try {
@@ -149,7 +166,7 @@ export default function OnlineRegisterForm() {
         } catch {}
       }
     },
-    [age, participant, registerParticipant, formRef, validateData]
+    [age, participant, registerParticipant, formRef, validateData, handleReset]
   )
 
   return (
