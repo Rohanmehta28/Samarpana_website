@@ -114,24 +114,11 @@ export default function OnlineRegisterForm() {
       return false
     }
 
-    if (!donator.amount.match(/^\d{2,3,4,5,6,7,8,9}$/)) {
+    if (!donator.amount.match(/^\d{2,9}?$/)) {
       toast('Please enter a valid Amounts', {
         type: 'error',
       })
       return false
-    }
-
-    // validate SRN
-    if (donator.pes === true) {
-      if (
-        !(
-          donator.srn.match(/^(pes|PES)[1-2](ug|UG)(18|19|2[0-2])..\d\d\d/) ||
-          donator.srn.match(/^(pes|PES)\d\d\d\d\d\d\d\d\d\d/)
-        )
-      ) {
-        toast('Please enter a valid SRN/ PRN', { type: 'error' })
-        return false
-      }
     }
 
     // validate utr

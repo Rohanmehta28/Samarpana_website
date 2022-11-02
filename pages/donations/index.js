@@ -12,7 +12,7 @@ export default function Registrations() {
       </Head>
       <Page nopadding>
         <h1 className="text-grey text-center md:text-5xl text-4xl py-11 font-medium">
-          Donations
+          Donate
         </h1>
         <div className="flex flex-col">
           <div className="">
