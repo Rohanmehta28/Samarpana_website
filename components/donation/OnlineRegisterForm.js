@@ -23,13 +23,9 @@ export default function OnlineRegisterForm() {
     email: '',
     phone: '',
     amount: '',
-    pes: true,
     is_offline_registration: false,
     dob: '',
-    distance: '5',
-    srn: '',
     utr: '',
-    collector: 'PES',
   })
 
   const updateDetails = useCallback((e) => {
