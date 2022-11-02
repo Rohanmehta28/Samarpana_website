@@ -6,7 +6,7 @@ export default function Registrations() {
   return (
     <div>
       <Head>
-        <title>Samarpana 2022 | Registrations</title>
+        <title>Samarpana 2022 | Donations</title>
         <meta name="description" content="" />
         <link rel="icon" href="/samarpana.ico" />
       </Head>
