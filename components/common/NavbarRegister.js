@@ -11,18 +11,31 @@ const NavbarRegister = () => {
           <Image unoptimized src={logo} alt="picture didnt load" />
         </a>
       </Link>
-
       <div className="flex justify-center items-center px-2">
-        <Link href="/registrations" passHref>
-          <button
-            className="text-req-green border-req-green border-2 py-1 md:py-2 px-6 md:px-8 outline-none rounded-lg text-lg"
-            style={{
-              backdropFilter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
-            }}
-          >
-            Register
-          </button>
-        </Link>
+        <div className="flex justify-center items-center px-2">
+          <Link href="/registrations" passHref>
+            <button
+              className="text-req-green border-req-green border-2 py-1 md:py-2 px-6 md:px-8 outline-none rounded-lg text-lg"
+              style={{
+                backdropFilter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+              }}
+            >
+              Register
+            </button>
+          </Link>
+        </div>
+        <div className="flex justify-center items-center px-2">
+          <Link href="/donations" passHref>
+            <button
+              className="text-req-green border-req-green border-2 py-1 md:py-2 px-6 md:px-8 outline-none rounded-lg text-lg"
+              style={{
+                backdropFilter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+              }}
+            >
+              Donate
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   )
