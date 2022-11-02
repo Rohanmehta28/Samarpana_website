@@ -44,7 +44,7 @@ export default function OnlineRegisterForm() {
   }, [])
 
   const registerDonator = useCallback(async () => {
-    toast('Registering...')
+    toast('Donating...')
     const p = { ...donator }
     p.timestamp = Timestamp.fromDate(new Date())
     let fs
@@ -56,7 +56,7 @@ export default function OnlineRegisterForm() {
       await addDoc(collection(db, 'donator'), p)
     }
 
-    toast('Registered Successfully', { type: 'success' })
+    toast('Donated Successfully', { type: 'success' })
 
     // if (donator.pes) {
     //   toast('NOTE : You will now be redirected to PESU Academy for the payment.')
@@ -131,7 +131,7 @@ export default function OnlineRegisterForm() {
       email: '',
       phone: '',
       pes: true,
-      is_offline_registration: false,
+      is_offline_registration: true,
       dob: '',
       distance: '5',
       srn: '',

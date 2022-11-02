@@ -61,7 +61,7 @@ export default function OfflineRegisterForm() {
   }, [])
 
   const registerDonator = useCallback(async () => {
-    toast('Registering...')
+    toast('Donating...')
     const p = { ...donator }
     p.timestamp = Timestamp.fromDate(new Date())
     let fs
@@ -71,7 +71,7 @@ export default function OfflineRegisterForm() {
     } else {
       await addDoc(collection(db, 'donator'), p)
     }
-    toast('Registered Successfully', { type: 'success' })
+    toast('Donated Successfully', { type: 'success' })
     try {
       formRef.current.clear()
     } catch {}

@@ -50,6 +50,7 @@ const Navbar = () => {
     { title: 'Announcements', path: '/announcements' },
     { title: "Samarpana '19", path: '/samarpana-19' },
     { title: 'Registrations', path: '/registrations' },
+    { title: 'Donations', path: '/donations' },
   ]
 
   return (
