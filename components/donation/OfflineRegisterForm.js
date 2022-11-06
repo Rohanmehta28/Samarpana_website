@@ -271,10 +271,10 @@ export default function OfflineRegisterForm() {
             <option value=""></option>
             <option value="Akarsh Anil Kumar">Akarsh Anil Kumar</option>
             <option value="Naitik">Naitik</option>
+            <option value="Sanath">Sanath Hoysala</option>
             <option value="Soumya">Soumya</option>
             <option value="Akanksha">Akanksha</option>
             <option value="Khushi">Khushi</option>
-            <option value="Khushi">Sanath Hoysala</option>
           </select>
         </label>
         <h4 className="font-bold text-step-1 p-2 border-2 border-green-600 rounded-lg text-green-600 my-4">
