@@ -25,7 +25,7 @@ export default function OfflineRegisterForm() {
         21: 950,
       },
       youngerThan22: {
-        5: 400,
+        5: 320,
         10: 550,
         21: 750,
       },
